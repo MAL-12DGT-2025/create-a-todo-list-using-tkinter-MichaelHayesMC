@@ -10,6 +10,7 @@ def add_todo():
     return
 
 def remove_todo():
+    List_widget.delete(tk.ANCHOR)
     return
 
 main_frame = tk.LabelFrame(root, height=500, width=400, padx=10, pady=10)
