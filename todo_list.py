@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 
 root = tk.Tk()
+root.title("To-Do List")
 
 def add_todo():
     if add_text.get() != "":
@@ -31,7 +32,7 @@ body_frame.pack_propagate(False)
 body_frame.grid_propagate(False)
 
 List_widget = tk.Listbox(body_frame, height=19, width=32, font=("Arial", 12))
-List_widget.pack(side="left")
+List_widget.pack(side="left", fill="both")
 
 scrollbar = tk.Scrollbar(body_frame)
 scrollbar.pack(side="right", fill="both")
