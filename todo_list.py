@@ -30,8 +30,14 @@ body_frame.pack()
 body_frame.pack_propagate(False)
 body_frame.grid_propagate(False)
 
-List_widget = tk.Listbox(body_frame, height=19, width=50)
-List_widget.pack()
+List_widget = tk.Listbox(body_frame, height=19, width=32, font=("Arial", 12))
+List_widget.pack(side="left")
+
+scrollbar = tk.Scrollbar(body_frame)
+scrollbar.pack(side="right", fill="both")
+
+List_widget.config(yscrollcommand=scrollbar.set)
+scrollbar.config(command=List_widget.yview)
 
 #User Entry Interface
 add_frame = tk.LabelFrame(main_frame, height=50, width=350, padx=20, pady=10)
